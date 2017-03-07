@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="public">
+  <select id="selectAll" resultType="map">
+     SELECT public_img, public_title, public_description 
+       FROM project01.tbl_publications
+  </select>
+</mapper>
