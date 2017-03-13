@@ -8,21 +8,21 @@
        FROM project01.tbl_product
   </select>
   <select id="selectRecent" resultType="map">
-     SELECT product_title, product_description, product_img, product_price
+     SELECT product_code, product_title, product_description, product_img, product_price
        FROM project01.tbl_product
   </select>
   <select id="selectDigital" resultType="map">
-     SELECT product_title, product_description, product_img, product_price
+     SELECT product_code, product_title, product_description, product_img, product_price
        FROM project01.tbl_product
       WHERE product_catagory = 'digital'
   </select>
   <select id="selectPero" resultType="map">
-     SELECT product_title, product_description, product_img, product_price
+     SELECT product_code, product_title, product_description, product_img, product_price
        FROM project01.tbl_product
       WHERE product_catagory = 'pero'
   </select>
   <select id="selectCart" resultType="map">
-     SELECT product_title, product_price
+     SELECT product_code, product_title, product_price
        FROM project01.tbl_product
   </select>
 </mapper>

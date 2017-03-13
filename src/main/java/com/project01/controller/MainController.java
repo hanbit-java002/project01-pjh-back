@@ -28,7 +28,7 @@ public class MainController {
    @Autowired
    private PublicService publicService;
    
-   @RequestMapping("/api/main/section/{sectionCode}/items")
+   @RequestMapping("/api/main/section/{sectionCode}")
    public List<Map<String, Object>> getSectionItems(
 		   @PathVariable("sectionCode") String sectionCode) {
 	   			 			
