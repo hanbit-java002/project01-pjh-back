@@ -16,6 +16,7 @@ import com.project01.service.ProductService;
 import com.project01.service.PublicService;
 
 @RestController
+@RequestMapping("/api/main/section")
 public class MainController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(MainController.class);
@@ -28,7 +29,7 @@ public class MainController {
    @Autowired
    private PublicService publicService;
    
-   @RequestMapping("/api/main/section/{sectionCode}")
+   @RequestMapping("/{sectionCode}")
    public List<Map<String, Object>> getSectionItems(
 		   @PathVariable("sectionCode") String sectionCode) {
 	   			 			
@@ -53,9 +54,9 @@ public class MainController {
 			   else if ("pero".equals(sectionCode)) {
 				   return productService.getPero();
 			   }
-			   else if ("products".equals(sectionCode)) {
+			   /*else if ("products".equals(sectionCode)) {
 				   return productService.getAll();
-			   }
+			   }*/
 			   else if ("cart".equals(sectionCode)) {
 				   return productService.getCart();
 			   }

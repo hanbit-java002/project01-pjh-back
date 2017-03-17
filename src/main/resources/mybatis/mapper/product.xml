@@ -7,6 +7,11 @@
      SELECT product_code, product_title, product_description, product_img, product_price, product_text
        FROM project01.tbl_product
   </select>
+  <select id="selectOne" parameterType="string" resultType="map">
+		SELECT product_title, product_price, product_description, product_text
+		  FROM project01.tbl_product
+		 WHERE product_code = #{productCode}
+	</select>
   <select id="selectRecent" resultType="map">
      SELECT product_code, product_title, product_description, product_img, product_price
        FROM project01.tbl_product

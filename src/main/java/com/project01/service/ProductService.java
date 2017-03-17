@@ -14,19 +14,22 @@ public class ProductService {
    @Autowired
    private ProductDAO productDAO;
    
+   public Map get(String productsCode) {
+		return productDAO.selectOne(productsCode);
+   }
    public List<Map<String, Object>> getAll() {
       return productDAO.selectAll();
    }
    public List<Map<String, Object>> getRecent() {
 	      return productDAO.selectRecent();
-	   }
+   }
    public List<Map<String, Object>> getDigital() {
 	      return productDAO.selectDigital();
-	   }
+   }
    public List<Map<String, Object>> getPero() {
 	      return productDAO.selectPero();
-	   }
+   }
    public List<Map<String, Object>> getCart() {
 	      return productDAO.selectCart();
-	   }
+}
 }
