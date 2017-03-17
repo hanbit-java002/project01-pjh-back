@@ -16,6 +16,7 @@ public class ProductsController {
 
 	@Autowired
 	   private ProductService productService;
+	
 	@RequestMapping(value="/{productsCode}", method=RequestMethod.GET)
 	public Map get(@PathVariable("productsCode") String productsCode) {	
 		return productService.get(productsCode);
